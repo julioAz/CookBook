@@ -13,18 +13,6 @@ public class Ingrediente {
         this.tipoQuantidade = tipoQuantidade;
     }
 
-    public String getNome() {
-        return nome;
-    }
-
-    public double getQuantidade() {
-        return quantidade;
-    }
-
-    public TipoMedida getTipoQuantidade() {
-        return tipoQuantidade;
-    }
-
     @Override
     public String toString() {
         return String.format("%.3f %s %s", quantidade, tipoQuantidade, nome);

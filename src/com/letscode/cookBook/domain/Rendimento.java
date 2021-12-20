@@ -11,14 +11,6 @@ public class Rendimento {
         this.tipoRendimento = tipoRendimento;
     }
 
-    public int getQuantidade() {
-        return quantidade;
-    }
-
-    public TipoRendimento getTipoRendimento() {
-        return tipoRendimento;
-    }
-
     @Override
     public String toString() {
         return String.format("%2d %s", quantidade, tipoRendimento);

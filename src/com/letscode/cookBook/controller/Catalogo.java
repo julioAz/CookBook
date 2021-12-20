@@ -7,7 +7,7 @@ import java.util.List;
 import java.util.Random;
 
 public class Catalogo {
-    private List<Receita> receitas;
+    private final List<Receita> receitas;
 
     public Catalogo() {
         receitas = new ArrayList<>();
@@ -46,10 +46,13 @@ public class Catalogo {
         return null;
     }
 
-
-    //Retorna o Indice da receita e retorna -1 se a receita não for encontrada
-    public int getIndice(Receita receita) {
-        if(getReceita(receita.getNome()) != null){
+    /**
+     * Returns index of recipe.
+     * @param receita Object Receita
+     * @return -1 if not found.
+     */
+    public int getIndex(Receita receita) {
+        if (getReceita(receita.getNome()) !=  null) {
             return this.receitas.indexOf(receita);
         }
         return -1;
